@@ -25,3 +25,9 @@ export function checkInputValidity(inputId) {
     errorMessage.classList.add("show");
   }
 }
+
+export function hideErrorMessage(inputId) {
+  const errorMessage = document.getElementById(`${inputId}-error`);
+
+  errorMessage.classList.remove("show");
+}

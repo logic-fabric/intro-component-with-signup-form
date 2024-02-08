@@ -1,4 +1,8 @@
-import { checkInputValidity, giveFocusTo } from "./actions.js";
+import {
+  checkInputValidity,
+  giveFocusTo,
+  hideErrorMessage,
+} from "./actions.js";
 
 const tryItFreeButton = document.getElementById("try-it-free-button");
 
@@ -14,15 +18,27 @@ const passwordInput = document.getElementById("password");
 firstNameInput.addEventListener("blur", () => {
   checkInputValidity("first-name");
 });
+firstNameInput.addEventListener("focus", () => {
+  hideErrorMessage("first-name");
+});
 
 lastNameInput.addEventListener("blur", () => {
   checkInputValidity("last-name");
+});
+lastNameInput.addEventListener("focus", () => {
+  hideErrorMessage("last-name");
 });
 
 emailInput.addEventListener("blur", () => {
   checkInputValidity("email");
 });
+emailInput.addEventListener("focus", () => {
+  hideErrorMessage("email");
+});
 
 passwordInput.addEventListener("blur", () => {
   checkInputValidity("password");
+});
+passwordInput.addEventListener("focus", () => {
+  hideErrorMessage("password");
 });
