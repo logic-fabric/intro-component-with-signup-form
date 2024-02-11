@@ -25,7 +25,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -39,7 +39,7 @@
 
   <body>
     <main>
-      <section>
+      <section class="hero-section">
         <h1>Learn to code by watching others</h1>
 
         <p>
@@ -49,83 +49,112 @@
         </p>
       </section>
 
-      <section>
+      <section class="form-section">
         <button id="try-it-free-button" type="button">
           <strong>Try it free 7 days</strong> then $20/mo. thereafter
         </button>
 
         <form>
-          <label for="first-name">First Name</label>
           <div>
-            <input
-              id="first-name"
-              type="text"
-              placeholder="First Name"
-              min="1"
-            />
+            <div class="field-wrapper">
+              <label class="sr-only" for="first-name">First Name</label>
 
-            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd">
-                <circle fill="#FF7979" cx="12" cy="12" r="12" />
-                <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
-                <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
-              </g>
-            </svg>
+              <input
+                id="first-name"
+                type="text"
+                placeholder="First Name"
+                min="1"
+              />
+
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd">
+                  <circle fill="#FF7979" cx="12" cy="12" r="12" />
+                  <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+                  <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+                </g>
+              </svg>
+            </div>
+
+            <p class="error-message" id="first-name-error">
+              First Name cannot be empty
+            </p>
           </div>
-          <p id="first-name-error">First Name cannot be empty</p>
 
-          <label for="last-name">Last Name</label>
           <div>
-            <input id="last-name" type="text" placeholder="Last Name" min="1" />
+            <div class="field-wrapper">
+              <label class="sr-only" for="last-name">Last Name</label>
 
-            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd">
-                <circle fill="#FF7979" cx="12" cy="12" r="12" />
-                <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
-                <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
-              </g>
-            </svg>
+              <input
+                id="last-name"
+                type="text"
+                placeholder="Last Name"
+                min="1"
+              />
+
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd">
+                  <circle fill="#FF7979" cx="12" cy="12" r="12" />
+                  <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+                  <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+                </g>
+              </svg>
+            </div>
+
+            <p class="error-message" id="last-name-error">
+              Last Name cannot be empty
+            </p>
           </div>
-          <p id="last-name-error">Last Name cannot be empty</p>
 
-          <label for="email">Email Address</label>
           <div>
-            <input id="email" type="email" placeholder="Email Address" />
+            <div class="field-wrapper">
+              <label class="sr-only" for="email">Email Address</label>
 
-            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd">
-                <circle fill="#FF7979" cx="12" cy="12" r="12" />
-                <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
-                <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
-              </g>
-            </svg>
+              <input id="email" type="email" placeholder="Email Address" />
+
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd">
+                  <circle fill="#FF7979" cx="12" cy="12" r="12" />
+                  <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+                  <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+                </g>
+              </svg>
+            </div>
+
+            <p class="error-message" id="email-error">
+              Looks like this is not an email
+            </p>
           </div>
-          <p id="email-error">Looks like this is not an email</p>
 
-          <label for="password">Password</label>
           <div>
-            <input
-              id="password"
-              type="password"
-              placeholder="Password"
-              min="8"
-            />
+            <div class="field-wrapper">
+              <label class="sr-only" for="password">Password</label>
 
-            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd">
-                <circle fill="#FF7979" cx="12" cy="12" r="12" />
-                <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
-                <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
-              </g>
-            </svg>
+              <input
+                id="password"
+                type="password"
+                placeholder="Password"
+                min="8"
+              />
+
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd">
+                  <circle fill="#FF7979" cx="12" cy="12" r="12" />
+                  <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+                  <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+                </g>
+              </svg>
+            </div>
+
+            <p class="error-message" id="password-error">
+              Password must have at least 8 characters
+            </p>
           </div>
-          <p id="password-error">Password must have at least 8 characters</p>
 
           <button id="submit-button" type="submit">
             Claim your free trial
           </button>
 
-          <p>
+          <p class="terms-and-services">
             By clicking the button, you are agreeing to our
             <a href="#">Terms and Services</a>
           </p>
