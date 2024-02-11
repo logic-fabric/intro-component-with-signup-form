@@ -1,4 +1,5 @@
 import {
+  checkFormValidity,
   checkInputValidity,
   giveFocusTo,
   hideErrorMessage,
@@ -23,3 +24,10 @@ for (const field of FORM_FIELDS) {
     hideErrorMessage(field);
   });
 }
+
+const submitButton = document.getElementById("submit-button");
+
+submitButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  checkFormValidity();
+});

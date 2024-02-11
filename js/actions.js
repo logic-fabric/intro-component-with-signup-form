@@ -26,6 +26,12 @@ export function checkInputValidity(inputId) {
   }
 }
 
+export function checkFormValidity() {
+  for (const field of Object.keys(FIELD_VALIDATION)) {
+    checkInputValidity(field);
+  }
+}
+
 export function hideErrorMessage(inputId) {
   const errorMessage = document.getElementById(`${inputId}-error`);
 
