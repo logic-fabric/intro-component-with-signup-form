@@ -130,10 +130,18 @@ strong {
   border-radius: 8px;
 }
 
+.field-wrapper.invalid {
+  border-color: var(--primary);
+}
+
 .field-wrapper input {
   border: none;
 
   font-weight: 700;
+}
+
+.field-wrapper.invalid input {
+  color: var(--primary);
 }
 
 .field-wrapper input::placeholder {
@@ -142,6 +150,10 @@ strong {
 
 .field-wrapper svg {
   display: none;
+}
+
+.field-wrapper.invalid svg {
+  display: block;
 }
 
 .error-message {
@@ -155,7 +167,7 @@ strong {
   text-align: right;
 }
 
-.error-message.show {
+.field-wrapper.invalid + .error-message {
   display: block;
 }
 

@@ -56,7 +56,7 @@
 
         <form>
           <div>
-            <div class="field-wrapper">
+            <div class="field-wrapper" id="first-name-field-wrapper">
               <label class="sr-only" for="first-name">First Name</label>
 
               <input
@@ -75,13 +75,11 @@
               </svg>
             </div>
 
-            <p class="error-message" id="first-name-error">
-              First Name cannot be empty
-            </p>
+            <p class="error-message">First Name cannot be empty</p>
           </div>
 
           <div>
-            <div class="field-wrapper">
+            <div class="field-wrapper" id="last-name-field-wrapper">
               <label class="sr-only" for="last-name">Last Name</label>
 
               <input
@@ -100,13 +98,11 @@
               </svg>
             </div>
 
-            <p class="error-message" id="last-name-error">
-              Last Name cannot be empty
-            </p>
+            <p class="error-message">Last Name cannot be empty</p>
           </div>
 
           <div>
-            <div class="field-wrapper">
+            <div class="field-wrapper" id="email-field-wrapper">
               <label class="sr-only" for="email">Email Address</label>
 
               <input id="email" type="email" placeholder="Email Address" />
@@ -120,13 +116,11 @@
               </svg>
             </div>
 
-            <p class="error-message" id="email-error">
-              Looks like this is not an email
-            </p>
+            <p class="error-message">Looks like this is not an email</p>
           </div>
 
           <div>
-            <div class="field-wrapper">
+            <div class="field-wrapper" id="password-field-wrapper">
               <label class="sr-only" for="password">Password</label>
 
               <input
@@ -145,7 +139,7 @@
               </svg>
             </div>
 
-            <p class="error-message" id="password-error">
+            <p class="error-message">
               Password must have at least 8 characters
             </p>
           </div>

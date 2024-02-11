@@ -20,9 +20,9 @@ export function checkInputValidity(inputId) {
   const isValidInput = FIELD_VALIDATION[inputId](input.value);
 
   if (!isValidInput) {
-    const errorMessage = document.getElementById(`${inputId}-error`);
+    const fieldWrapper = document.getElementById(`${inputId}-field-wrapper`);
 
-    errorMessage.classList.add("show");
+    fieldWrapper.classList.add("invalid");
   }
 }
 
@@ -33,7 +33,7 @@ export function checkFormValidity() {
 }
 
 export function hideErrorMessage(inputId) {
-  const errorMessage = document.getElementById(`${inputId}-error`);
+  const fieldWrapper = document.getElementById(`${inputId}-field-wrapper`);
 
-  errorMessage.classList.remove("show");
+  fieldWrapper.classList.remove("invalid");
 }
