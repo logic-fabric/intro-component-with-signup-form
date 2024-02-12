@@ -1,6 +1,7 @@
 export function isValidEmail(email) {
-  var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return pattern.test(email);
+  const REGEX_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  return REGEX_PATTERN.test(email);
 }
 
 export function isValidName(name) {
