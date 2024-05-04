@@ -161,6 +161,7 @@ strong {
 }
 
 .field-wrapper input {
+  width: 100%;
   border: none;
 
   font-weight: 700;
